@@ -405,6 +405,25 @@ wait()
 sound:play()
 end
 
+function TAS()
+getgenv().Spectate = "One"
+getgenv().Create = "Two"
+getgenv().Test = "Three"
+getgenv().Pause = "E"
+getgenv().Backward = "F"
+getgenv().Forward = "G"
+getgenv().FrameBackward = "F"
+getgenv().FrameForward = "G"
+getgenv().Clear = "Six"
+getgenv().CollisionToggle = "X"
+getgenv().CollisionViewer = "C"
+getgenv().VelocityToggle = "V"
+getgenv().Confirm = "LeftControl"
+getgenv().ClearConfirm = "RightControl"
+getgenv().FrameAdvance = "R"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/0Void2391/Roblox-tas/main/tas.lua"))() 
+end
+
 
 
 --Timer
@@ -606,6 +625,20 @@ Tab:AddButton({
 	Name = "Infinite Yield",
 	Callback = function()
       		InfiniteYield()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "Infinite Yield",
+	Callback = function()
+      		InfiniteYield()
+  	end    
+})
+
+Tab:AddButton({
+	Name = "TAS (Requires Anticheat Bypass)",
+	Callback = function()
+      		TAS()
   	end    
 })
 
